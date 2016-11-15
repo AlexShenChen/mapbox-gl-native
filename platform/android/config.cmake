@@ -204,9 +204,10 @@ macro(mbgl_platform_test)
         PRIVATE platform/android/src/test/main.jni.cpp
 
         # Headless view
+        PRIVATE platform/default/headless_backend.cpp
         PRIVATE platform/default/headless_display.cpp
-        PRIVATE platform/default/headless_view.cpp
-        PRIVATE platform/android/src/headless_view_egl.cpp
+        PRIVATE platform/linux/src/headless_backend_egl.cpp
+        PRIVATE platform/linux/src/headless_display_egl.cpp
     )
 
     target_link_libraries(mbgl-test
